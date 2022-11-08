@@ -1,0 +1,35 @@
+// $Id: assignment3.mpc
+
+project (assignment3) {
+  exename = assignment3
+  install = .
+ 
+  specific (make, gnuace) {
+    compile_flags += -std=c++11
+  }
+
+  Source_Files {
+    
+
+	Stack_Expr_Command_Factory.cpp
+	Number_Command.cpp
+	Add_Command.cpp
+	Subtract_Command.cpp
+	Multiply_Command.cpp
+	Divide_Command.cpp
+	Modulo_Command.cpp
+	Facade.cpp
+	driver.cpp	
+    
+  }
+
+  Template_Files {
+    
+  	Array_Base.cpp
+	Array.cpp
+	Stack.cpp 
+	Array_Iterator.cpp
+
+
+  }
+}

@@ -1,0 +1,79 @@
+This is the valgrind file
+
+[aamailar@tesla cs363-fall2021-assignment3]$ valgrind ./assignment3
+==152488== Memcheck, a memory error detector
+==152488== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==152488== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==152488== Command: ./assignment3
+==152488==
+5 + 4
+==152488== Invalid read of size 8
+==152488==    at 0x403786: Array<Expr_Command*>::resize(unsigned long) (in /home/aamailar/CSCI363/cs363-fall2021-assignment3/assignment3)
+==152488==    by 0x4031A4: Facade::infix_to_postfix(std::string const&, Stack_Expr_Command_Factory&, Array<Expr_Command*>&) (in /home/aamailar/CSCI363/cs363-fall2021-assignment3/assignment3)
+==152488==    by 0x403C2E: main (in /home/aamailar/CSCI363/cs363-fall2021-assignment3/assignment3)
+==152488==  Address 0x604d210 is 0 bytes after a block of size 0 alloc'd
+==152488==    at 0x4C2AC38: operator new[](unsigned long) (vg_replace_malloc.c:433)
+==152488==    by 0x4038A5: Array<Expr_Command*>::Array() (in /home/aamailar/CSCI363/cs363-fall2021-assignment3/assignment3)
+==152488==    by 0x403C06: main (in /home/aamailar/CSCI363/cs363-fall2021-assignment3/assignment3)
+==152488==
+==152488== Invalid read of size 8
+==152488==    at 0x403786: Array<Expr_Command*>::resize(unsigned long) (in /home/aamailar/CSCI363/cs363-fall2021-assignment3/assignment3)
+==152488==    by 0x40326D: Facade::infix_to_postfix(std::string const&, Stack_Expr_Command_Factory&, Array<Expr_Command*>&) (in /home/aamailar/CSCI363/cs363-fall2021-assignment3/assignment3)
+==152488==    by 0x403C2E: main (in /home/aamailar/CSCI363/cs363-fall2021-assignment3/assignment3)
+==152488==  Address 0x604d2b0 is 0 bytes after a block of size 0 alloc'd
+==152488==    at 0x4C2AC38: operator new[](unsigned long) (vg_replace_malloc.c:433)
+==152488==    by 0x4038A5: Array<Expr_Command*>::Array() (in /home/aamailar/CSCI363/cs363-fall2021-assignment3/assignment3)
+==152488==    by 0x4038C4: Stack<Expr_Command*>::Stack() (in /home/aamailar/CSCI363/cs363-fall2021-assignment3/assignment3)
+==152488==    by 0x402F5C: Facade::infix_to_postfix(std::string const&, Stack_Expr_Command_Factory&, Array<Expr_Command*>&) (in /home/aamailar/CSCI363/cs363-fall2021-assignment3/assignment3)
+==152488==    by 0x403C2E: main (in /home/aamailar/CSCI363/cs363-fall2021-assignment3/assignment3)
+==152488==
+==152488== Invalid read of size 1
+==152488==    at 0x403A5A: Array<char>::resize(unsigned long) (in /home/aamailar/CSCI363/cs363-fall2021-assignment3/assignment3)
+==152488==    by 0x403AF1: Stack<char>::push(char) (in /home/aamailar/CSCI363/cs363-fall2021-assignment3/assignment3)
+==152488==    by 0x403290: Facade::infix_to_postfix(std::string const&, Stack_Expr_Command_Factory&, Array<Expr_Command*>&) (in /home/aamailar/CSCI363/cs363-fall2021-assignment3/assignment3)
+==152488==    by 0x403C2E: main (in /home/aamailar/CSCI363/cs363-fall2021-assignment3/assignment3)
+==152488==  Address 0x604d2f0 is 0 bytes after a block of size 0 alloc'd
+==152488==    at 0x4C2AC38: operator new[](unsigned long) (vg_replace_malloc.c:433)
+==152488==    by 0x4038D7: Array<char>::Array() (in /home/aamailar/CSCI363/cs363-fall2021-assignment3/assignment3)
+==152488==    by 0x4038F6: Stack<char>::Stack() (in /home/aamailar/CSCI363/cs363-fall2021-assignment3/assignment3)
+==152488==    by 0x402F66: Facade::infix_to_postfix(std::string const&, Stack_Expr_Command_Factory&, Array<Expr_Command*>&) (in /home/aamailar/CSCI363/cs363-fall2021-assignment3/assignment3)
+==152488==    by 0x403C2E: main (in /home/aamailar/CSCI363/cs363-fall2021-assignment3/assignment3)
+==152488==
+==152488== Invalid read of size 8
+==152488==    at 0x40379C: Array<Expr_Command*>::resize(unsigned long) (in /home/aamailar/CSCI363/cs363-fall2021-assignment3/assignment3)
+==152488==    by 0x403379: Facade::infix_to_postfix(std::string const&, Stack_Expr_Command_Factory&, Array<Expr_Command*>&) (in /home/aamailar/CSCI363/cs363-fall2021-assignment3/assignment3)
+==152488==    by 0x403C2E: main (in /home/aamailar/CSCI363/cs363-fall2021-assignment3/assignment3)
+==152488==  Address 0x604d5a0 is 0 bytes after a block of size 16 alloc'd
+==152488==    at 0x4C2AC38: operator new[](unsigned long) (vg_replace_malloc.c:433)
+==152488==    by 0x403774: Array<Expr_Command*>::resize(unsigned long) (in /home/aamailar/CSCI363/cs363-fall2021-assignment3/assignment3)
+==152488==    by 0x4031A4: Facade::infix_to_postfix(std::string const&, Stack_Expr_Command_Factory&, Array<Expr_Command*>&) (in /home/aamailar/CSCI363/cs363-fall2021-assignment3/assignment3)
+==152488==    by 0x403C2E: main (in /home/aamailar/CSCI363/cs363-fall2021-assignment3/assignment3)
+==152488==
+==152488== Invalid read of size 4
+==152488==    at 0x402091: Stack<int>::push(int) (in /home/aamailar/CSCI363/cs363-fall2021-assignment3/assignment3)
+==152488==    by 0x402001: Number_Command::execute() (in /home/aamailar/CSCI363/cs363-fall2021-assignment3/assignment3)
+==152488==    by 0x403C4F: main (in /home/aamailar/CSCI363/cs363-fall2021-assignment3/assignment3)
+==152488==  Address 0x604d040 is 0 bytes after a block of size 0 alloc'd
+==152488==    at 0x4C2AC38: operator new[](unsigned long) (vg_replace_malloc.c:433)
+==152488==    by 0x403FC1: Array<int>::Array() (in /home/aamailar/CSCI363/cs363-fall2021-assignment3/assignment3)
+==152488==    by 0x403FE0: Stack<int>::Stack() (in /home/aamailar/CSCI363/cs363-fall2021-assignment3/assignment3)
+==152488==    by 0x403BBD: main (in /home/aamailar/CSCI363/cs363-fall2021-assignment3/assignment3)
+==152488==
+ Answer is: 9
+QUIT
+==152488==
+==152488== HEAP SUMMARY:
+==152488==     in use at exit: 64 bytes in 3 blocks
+==152488==   total heap usage: 21 allocs, 18 frees, 308 bytes allocated
+==152488==
+==152488== LEAK SUMMARY:
+==152488==    definitely lost: 64 bytes in 3 blocks
+==152488==    indirectly lost: 0 bytes in 0 blocks
+==152488==      possibly lost: 0 bytes in 0 blocks
+==152488==    still reachable: 0 bytes in 0 blocks
+==152488==         suppressed: 0 bytes in 0 blocks
+==152488== Rerun with --leak-check=full to see details of leaked memory
+==152488==
+==152488== For lists of detected and suppressed errors, rerun with: -s
+==152488== ERROR SUMMARY: 7 errors from 5 contexts (suppressed: 0 from 0)
+
