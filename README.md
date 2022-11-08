@@ -9,4 +9,4 @@ Requirements:
 3)The program must loop until the user types QUIT—notice the all caps.
 4)All output should go to STDOUT.
 
-Solution - See Attached jpg files
+Solution - See Working and Use Files
